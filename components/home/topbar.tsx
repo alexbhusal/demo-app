@@ -8,6 +8,7 @@ import {
 import React from "react";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { Colors } from "@/constants/theme";
+import { router } from "expo-router";
 
 const Topbar = () => {
   return (
@@ -22,6 +23,8 @@ const Topbar = () => {
           placeholder="Search for products..."
           placeholderTextColor={"#b7b6b6"}
           style={styles.input}
+            editable={false}
+          onPress={() => router.push("/searchScreen")}
         />
 
         <TouchableOpacity>
@@ -62,8 +65,8 @@ const styles = StyleSheet.create({
     borderColor: Colors.tint,
     borderWidth: 1,
     borderRadius: 40,
-    paddingLeft:16, 
-    paddingRight:3,
+    paddingLeft: 16,
+    paddingRight: 3,
     marginHorizontal: 10,
     height: 40,
   },

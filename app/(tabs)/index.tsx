@@ -1,7 +1,6 @@
 import { ScrollView } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Topbar from "@/components/topbar";
 import Categories from "@/components/home/Categories";
 import OfferBanner from "@/components/home/OffersBanner";
 import Deals from "@/components/home/Deals";
@@ -12,12 +11,12 @@ import LiveSell from "@/components/home/LiveSell";
 import SpecialOffer from "@/components/home/SpecialOffer";
 import TodaysDeal from "@/components/home/TodaysDeal";
 import FlashDeal from "@/components/home/FlashDeal";
-import BorderBottom from "@/components/home/BorderBottom";
 import BestDeals from "@/components/home/BestDeals";
+import Topbar from "@/components/home/topbar";
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={{ backgroundColor: "#ffffff" }} >
+    <SafeAreaView style={{ backgroundColor: "#ffffff"}} edges={["left","right","top"]} >
       <ScrollView showsVerticalScrollIndicator={false}>
         <Topbar />
         <OfferBanner />
