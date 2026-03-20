@@ -24,7 +24,7 @@ const Topbar = () => {
           placeholderTextColor={"#b7b6b6"}
           style={styles.input}
             editable={false}
-          onPress={() => router.push("/searchScreen")}
+          onPress={() => router.push(`/searchScreen?focus=${true}`)}
         />
 
         <TouchableOpacity>
