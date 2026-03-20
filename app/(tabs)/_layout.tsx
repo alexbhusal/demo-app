@@ -35,7 +35,7 @@ export default function TabLayout() {
         name="live"
         options={{
           title: 'Live',
-          tabBarIcon: ({ color }) => <IconSymbol size={42} name="dot.radiowaves.left.and.right" color={color} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={32} name="dot.radiowaves.left.and.right" color={color} />,
         }}
       />
       <Tabs.Screen

@@ -9,8 +9,7 @@ import {
   FlatList,
 } from "react-native";
 import Feather from "@expo/vector-icons/Feather";
-import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import { IconSymbol } from "../ui/icon-symbol";
+
 
 const LiveProducts = () => {
   const ProductCard = ({ item }: any) => {
@@ -112,7 +111,7 @@ const styles = StyleSheet.create({
   },
 
   name: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: "600",
   },
   nameBar: {
