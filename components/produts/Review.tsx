@@ -98,7 +98,7 @@ export default function Review() {
               <Ionicons key={i} name="star" size={16} color="#f4b400" />
             ))}
           </View>
-          <Text style={styles.total}>(84)</Text>
+          <Text style={styles.total}>(969)</Text>
         </View>
 
         <View style={styles.right}>
@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
   },
 
   sectionTitle: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: "600",
     marginVertical: 10,
   },

@@ -86,12 +86,12 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    fontSize: 16,
+    fontSize: 12,
     color: "#222",
   },
 
   subtitle: {
-    fontSize: 13,
+    fontSize: 11,
     color: "#888",
     marginTop: 2,
   },
@@ -102,8 +102,10 @@ const styles = StyleSheet.create({
   },
 
   rightText: {
-    fontSize: 15,
+    fontSize: 13,
     color: "#333",
     marginRight: 5,
+    fontStyle:"italic",
+    fontWeight:500
   },
 });

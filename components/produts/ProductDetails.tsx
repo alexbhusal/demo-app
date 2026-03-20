@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    fontSize: 28,
+    fontSize: 22,
     fontWeight: "700",
     color: "#333",
   },
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
   },
 
   ratingText: {
-    fontSize: 18,
+    fontSize: 14,
     marginRight: 6,
   },
 
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
   },
 
   price: {
-    fontSize: 30,
+    fontSize: 22,
     fontWeight: "700",
     color: "#5a67d8",
     marginRight: 10,
@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: "#fff3e8",
-    padding: 12,
+    padding: 8,
     borderRadius: 8,
     marginTop: 15,
   },
@@ -188,12 +188,12 @@ const styles = StyleSheet.create({
   offerText: {
     marginLeft: 10,
     color: "#f28c28",
-    fontWeight: "500",
+    fontWeight: "400",
   },
 
   label: {
     marginTop: 20,
-    fontSize: 18,
+    fontSize: 12,
     color: "#444",
   },
 
@@ -203,8 +203,8 @@ const styles = StyleSheet.create({
   },
 
   colorWrapper: {
-    width: 70,
-    height: 70,
+    width: 40,
+    height: 40,
     borderRadius: 35,
     padding: 3,
     marginRight: 12,
@@ -244,7 +244,7 @@ const styles = StyleSheet.create({
 
   storageText: {
     color: "#555",
-    fontSize: 16,
+    fontSize: 12,
   },
 
   activeStorageText: {

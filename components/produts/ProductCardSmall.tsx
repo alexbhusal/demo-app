@@ -2,7 +2,7 @@ import { router } from "expo-router";
 import React from "react";
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 
-export default function ProductCard({ item }: any) {
+export default function ProductCardSmall({ item }: any) {
   return (
     <TouchableOpacity style={styles.card} onPress={() => router.push(`/productInfo?id=${item.id}`)}>
       <View style={styles.imageContainer}>
@@ -38,7 +38,7 @@ export default function ProductCard({ item }: any) {
 
 const styles = StyleSheet.create({
   card: {
-    width: 170,
+    width: 130,
     margin: 10,
   },
 
@@ -53,8 +53,8 @@ const styles = StyleSheet.create({
   },
 
   image: {
-    width: "100%",
-    height: "100%",
+    width: 80,
+    height: 250,
     resizeMode: "contain",
   },
 

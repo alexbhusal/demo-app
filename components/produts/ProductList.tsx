@@ -1,7 +1,7 @@
 import React from "react";
 import { FlatList } from "react-native";
-import ProductCard from "./ProductCard";
 import { data } from "@/data";
+import ProductCardSmall from "./ProductCardSmall";
 
 export default function ProductList() {
   return (
@@ -10,7 +10,7 @@ export default function ProductList() {
       horizontal
       keyExtractor={(item) => item.id}
       showsHorizontalScrollIndicator={false}
-      renderItem={({ item }) => <ProductCard item={item} />}
+      renderItem={({ item }) => <ProductCardSmall item={item} />}
     />
   );
 }
