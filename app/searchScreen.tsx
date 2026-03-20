@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import { useRouter } from "expo-router";
+import { useLocalSearchParams, useRouter } from "expo-router";
 import { Colors } from "@/constants/theme";
 import EvilIcons from "@expo/vector-icons/EvilIcons";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -30,15 +30,20 @@ const historyData = [
 
 export default function SearchScreen() {
   const router = useRouter();
+  const {focus}= useLocalSearchParams();
+  const shouldFocus = focus === "true"; 
+  
 
   const [history, setHistory] = useState(historyData);
   const [isSearching, setIsSearching] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
 
   const clearAll = () => setHistory([]);
 
   const handleSearch = () => {
     Keyboard.dismiss();
+    setIsFocused(false);
     setLoading(true);
 
     setTimeout(() => {
@@ -59,8 +64,14 @@ export default function SearchScreen() {
 
           <TextInput
             placeholder="Search for products..."
+            placeholderTextColor={"#b7b6b6"}
             style={styles.input}
-            autoFocus={true}
+            autoFocus={shouldFocus}
+            onFocus={() => {
+              setIsFocused(true);
+              setIsSearching(false);
+            }}
+            onBlur={() => setIsFocused(false)}
             onSubmitEditing={handleSearch}
           />
 
@@ -78,14 +89,15 @@ export default function SearchScreen() {
         </View>
       ) : isSearching ? (
         <ProductList2 />
-      ) : (
+      ) : isFocused ? (
         <>
           <View style={styles.header}>
             <Text style={styles.title}>Search History</Text>
 
             <TouchableOpacity onPress={clearAll}>
               <Text style={styles.clear}>
-                Clear All <EvilIcons name="trash" size={18} color="gray" />
+                Clear All{" "}
+                <EvilIcons name="trash" size={18} color="gray" />
               </Text>
             </TouchableOpacity>
           </View>
@@ -103,6 +115,7 @@ export default function SearchScreen() {
                   setTimeout(() => {
                     setLoading(false);
                     setIsSearching(true);
+                    setIsFocused(false);
                   }, 1200);
                 }}
               >
@@ -111,7 +124,7 @@ export default function SearchScreen() {
             )}
           />
         </>
-      )}
+      ) : null}
     </SafeAreaView>
   );
 }
